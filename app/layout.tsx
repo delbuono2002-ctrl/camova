@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://camova.live"),
+  metadataBase: new URL("https://www.camova.live/"),
 
   title: "CAMOVA",
   description: "Premium Live Streaming Platform",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CAMOVA",
     description: "Premium Live Streaming Platform",
-    url: "https://camova.live",
+    url: "https://www.camova.live/",
     siteName: "CAMOVA",
     images: [
       {
