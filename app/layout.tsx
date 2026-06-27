@@ -18,8 +18,28 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://camova.live"),
 
-  title: "CAMOVA",
-  description: "Premium Live Streaming Platform",
+  title: {
+    default: "CAMOVA | Premium Live Streaming Platform",
+    template: "%s | CAMOVA",
+  },
+
+  description:
+    "CAMOVA is a premium live streaming platform featuring verified creators, private shows and a modern, secure user experience for adults.",
+
+  applicationName: "CAMOVA",
+
+  alternates: {
+    canonical: "https://camova.live",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 
   icons: {
     icon: "/icon.png",
@@ -28,10 +48,13 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "CAMOVA",
-    description: "Premium Live Streaming Platform",
+    title: "CAMOVA | Premium Live Streaming Platform",
+    description:
+      "Discover verified creators, private shows and a premium live streaming experience.",
     url: "https://camova.live",
     siteName: "CAMOVA",
+    locale: "en_US",
+    type: "website",
     images: [
       {
         url: "/logo.png",
@@ -40,14 +63,13 @@ export const metadata: Metadata = {
         alt: "CAMOVA",
       },
     ],
-    locale: "en_US",
-    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "CAMOVA",
-    description: "Premium Live Streaming Platform",
+    title: "CAMOVA | Premium Live Streaming Platform",
+    description:
+      "Discover verified creators and premium live entertainment.",
     images: ["/logo.png"],
   },
 };
@@ -64,7 +86,6 @@ export default function RootLayout({
       >
         <AgeVerification />
         <CookieBanner />
-
         {children}
       </body>
     </html>
