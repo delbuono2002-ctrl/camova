@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | CAMOVA",
+  description:
+    "Read the CAMOVA Terms of Service, including age requirements, acceptable use, intellectual property and legal information.",
+};
+
 export default function TermsPage() {
   return (
     <main className="min-h-screen bg-[#090909] text-white py-28 px-8">
@@ -27,7 +35,9 @@ export default function TermsPage() {
 
             <p>
               CAMOVA is intended exclusively for adults aged 18 years or older.
-              By using this website, you confirm that you meet this requirement.
+              By using this website, you confirm that you are at least 18 years
+              of age and legally permitted to access adult-oriented content in
+              your jurisdiction.
             </p>
           </section>
 
@@ -41,6 +51,7 @@ export default function TermsPage() {
               <li>No harassment or abusive behavior.</li>
               <li>No unauthorized access attempts.</li>
               <li>No infringement of intellectual property rights.</li>
+              <li>Users must comply with all applicable laws.</li>
             </ul>
           </section>
 
@@ -50,8 +61,9 @@ export default function TermsPage() {
             </h2>
 
             <p>
-              All trademarks, branding, graphics and content displayed on
-              CAMOVA remain the property of their respective owners.
+              All trademarks, branding, graphics and website content displayed
+              on CAMOVA remain the property of their respective owners unless
+              otherwise stated.
             </p>
           </section>
 
@@ -61,9 +73,10 @@ export default function TermsPage() {
             </h2>
 
             <p>
-              CAMOVA provides its services "as is" without warranties of any
-              kind. We are not liable for interruptions, errors or temporary
-              unavailability.
+              CAMOVA is provided on an "as is" and "as available" basis without
+              warranties of any kind. We do not guarantee uninterrupted
+              availability and are not liable for temporary interruptions,
+              technical issues or third-party services.
             </p>
           </section>
 
@@ -73,6 +86,11 @@ export default function TermsPage() {
             </h2>
 
             <p>
+              If you have questions regarding these Terms of Service, please
+              contact us at:
+            </p>
+
+            <p className="mt-4 font-semibold text-[#D4AF37]">
               camovalive@gmail.com
             </p>
           </section>
