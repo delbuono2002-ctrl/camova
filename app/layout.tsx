@@ -4,6 +4,7 @@ import "./globals.css";
 
 import AgeVerification from "@/components/AgeVerification";
 import CookieBanner from "@/components/CookieBanner";
+import StructuredData from "@/components/StructuredData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,6 +54,10 @@ export const metadata: Metadata = {
     },
   },
 
+  alternates: {
+    canonical: "https://camova.live",
+  },
+
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
@@ -62,7 +67,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CAMOVA | Premium Live Streaming Platform",
     description:
-      "Discover CAMOVA, a premium live streaming platform with verified creators and private live shows.",
+      "Discover CAMOVA, a premium live streaming platform featuring verified creators and private live shows.",
     url: "https://camova.live",
     siteName: "CAMOVA",
     locale: "en_US",
@@ -79,14 +84,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "CAMOVA",
+    title: "CAMOVA | Premium Live Streaming Platform",
     description:
-      "Premium live streaming platform with verified creators.",
+      "Discover CAMOVA, a premium live streaming platform featuring verified creators.",
     images: ["/logo.png"],
-  },
-
-  alternates: {
-    canonical: "https://camova.live",
   },
 };
 
@@ -100,7 +101,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-black text-white`}
       >
+        <StructuredData />
+
         <AgeVerification />
+
         <CookieBanner />
 
         {children}
