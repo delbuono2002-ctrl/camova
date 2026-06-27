@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+
 import "./globals.css";
 
 import AgeVerification from "@/components/AgeVerification";
@@ -17,10 +19,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.camova.live/"),
+  metadataBase: new URL("https://www.camova.live"),
 
-  title: "CAMOVA",
-  description: "Premium Live Streaming Platform",
+  title: {
+    default: "CAMOVA | Premium Live Streaming Platform",
+    template: "%s | CAMOVA",
+  },
+
+  description:
+    "Discover premium live streaming, verified creators, private shows and a modern live entertainment experience on CAMOVA.",
+
+  keywords: [
+    "live cam",
+    "live streaming",
+    "adult live",
+    "private shows",
+    "cam models",
+    "verified creators",
+    "premium live platform",
+    "camova",
+  ],
+
+  authors: [{ name: "CAMOVA" }],
+  creator: "CAMOVA",
+  publisher: "CAMOVA",
+
+  alternates: {
+    canonical: "https://www.camova.live",
+  },
 
   icons: {
     icon: "/icon.png",
@@ -29,9 +55,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "CAMOVA",
-    description: "Premium Live Streaming Platform",
-    url: "https://www.camova.live/",
+    title: "CAMOVA | Premium Live Streaming Platform",
+    description:
+      "Discover premium live streaming with verified creators on CAMOVA.",
+    url: "https://www.camova.live",
     siteName: "CAMOVA",
     images: [
       {
@@ -48,8 +75,21 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "CAMOVA",
-    description: "Premium Live Streaming Platform",
+    description:
+      "Discover premium live streaming with verified creators.",
     images: ["/logo.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -71,6 +111,8 @@ export default function RootLayout({
         <CookieBanner />
 
         {children}
+
+        <Analytics />
       </body>
     </html>
   );
