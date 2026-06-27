@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact | CAMOVA",
+  description:
+    "Get in touch with the CAMOVA team for support, legal inquiries, business partnerships and affiliate opportunities.",
+};
+
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#090909] text-white py-28 px-8">
@@ -15,9 +23,9 @@ export default function ContactPage() {
             </h2>
 
             <p>
-              If you have any questions regarding CAMOVA, our services, legal
-              matters, or partnership opportunities, please contact us using the
-              details below.
+              If you have any questions about CAMOVA, our platform, legal
+              matters, partnerships or general support, please contact us using
+              the information below.
             </p>
           </section>
 
@@ -27,21 +35,23 @@ export default function ContactPage() {
             </h2>
 
             <p>
-              Email: camovalive@gmail.com
+              <strong>Email:</strong> camovalive@gmail.com
             </p>
 
             <p className="mt-2">
-              Response time: Within 24–48 hours.
+              <strong>Response Time:</strong> Within 24–48 hours.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">
-              Business Inquiries
+              Business & Affiliate Inquiries
             </h2>
 
             <p>
-              Partnership and affiliate requests are welcome.
+              We welcome partnership opportunities, affiliate collaborations and
+              business inquiries. Feel free to contact us to discuss potential
+              cooperation.
             </p>
           </section>
 
