@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | CAMOVA",
+  description:
+    "Read the CAMOVA Privacy Policy to learn how we collect, use and protect personal information.",
+};
+
 export default function PrivacyPage() {
   return (
     <main className="min-h-screen bg-[#090909] text-white py-28 px-8">
@@ -16,8 +24,8 @@ export default function PrivacyPage() {
 
             <p>
               CAMOVA respects your privacy and is committed to protecting your
-              personal information. This Privacy Policy explains what data we
-              collect, how we use it, and how we protect it.
+              personal information. This Privacy Policy explains what information
+              we collect, how it is used and how we safeguard it.
             </p>
           </section>
 
@@ -27,7 +35,7 @@ export default function PrivacyPage() {
             </h2>
 
             <ul className="list-disc pl-6 space-y-2">
-              <li>Name (if provided)</li>
+              <li>Name (if voluntarily provided)</li>
               <li>Email address</li>
               <li>IP address</li>
               <li>Browser information</li>
@@ -42,11 +50,11 @@ export default function PrivacyPage() {
             </h2>
 
             <ul className="list-disc pl-6 space-y-2">
-              <li>Provide our services</li>
-              <li>Improve user experience</li>
+              <li>Provide and improve our services</li>
+              <li>Enhance user experience</li>
               <li>Prevent fraud and abuse</li>
-              <li>Respond to customer inquiries</li>
-              <li>Comply with legal obligations</li>
+              <li>Respond to customer support requests</li>
+              <li>Comply with applicable legal obligations</li>
             </ul>
           </section>
 
@@ -56,8 +64,8 @@ export default function PrivacyPage() {
             </h2>
 
             <p>
-              CAMOVA may use cookies and similar technologies to improve website
-              functionality and analyze visitor activity.
+              CAMOVA uses cookies and similar technologies to improve website
+              functionality, remember preferences and analyze website traffic.
             </p>
           </section>
 
@@ -67,8 +75,9 @@ export default function PrivacyPage() {
             </h2>
 
             <p>
-              We may use trusted third-party providers for hosting, analytics,
-              payment processing, customer support, and affiliate services.
+              We may use trusted third-party providers for website hosting,
+              analytics, payment processing, customer support and affiliate
+              services.
             </p>
           </section>
 
@@ -78,6 +87,11 @@ export default function PrivacyPage() {
             </h2>
 
             <p>
+              If you have any questions regarding this Privacy Policy, please
+              contact us at:
+            </p>
+
+            <p className="mt-4 font-semibold text-[#D4AF37]">
               camovalive@gmail.com
             </p>
           </section>
