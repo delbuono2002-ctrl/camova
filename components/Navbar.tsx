@@ -1,13 +1,21 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/60 border-b border-zinc-800">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-6">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-5">
 
         {/* Logo */}
-        <Link href="/" className="text-3xl font-black tracking-[0.35em] text-[#D4AF37] hover:opacity-80 transition">
-          CAMOVA
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="CAMOVA"
+            width={220}
+            height={70}
+            priority
+            className="h-14 w-auto transition hover:opacity-90"
+          />
         </Link>
 
         {/* Navigation */}
