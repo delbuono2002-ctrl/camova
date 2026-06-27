@@ -24,13 +24,25 @@ export const metadata: Metadata = {
   },
 
   description:
-    "CAMOVA is a premium live streaming platform featuring verified creators, private shows and a modern, secure user experience for adults.",
+    "Discover CAMOVA, a premium live streaming platform with verified creators, private live shows and a modern streaming experience.",
 
-  applicationName: "CAMOVA",
+  keywords: [
+    "CAMOVA",
+    "live streaming",
+    "premium streaming",
+    "verified creators",
+    "private live shows",
+    "online streaming",
+  ],
 
-  alternates: {
-    canonical: "https://camova.live",
-  },
+  authors: [
+    {
+      name: "CAMOVA",
+    },
+  ],
+
+  creator: "CAMOVA",
+  publisher: "CAMOVA",
 
   robots: {
     index: true,
@@ -50,7 +62,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CAMOVA | Premium Live Streaming Platform",
     description:
-      "Discover verified creators, private shows and a premium live streaming experience.",
+      "Discover CAMOVA, a premium live streaming platform with verified creators and private live shows.",
     url: "https://camova.live",
     siteName: "CAMOVA",
     locale: "en_US",
@@ -67,10 +79,14 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "CAMOVA | Premium Live Streaming Platform",
+    title: "CAMOVA",
     description:
-      "Discover verified creators and premium live entertainment.",
+      "Premium live streaming platform with verified creators.",
     images: ["/logo.png"],
+  },
+
+  alternates: {
+    canonical: "https://camova.live",
   },
 };
 
@@ -86,6 +102,7 @@ export default function RootLayout({
       >
         <AgeVerification />
         <CookieBanner />
+
         {children}
       </body>
     </html>
