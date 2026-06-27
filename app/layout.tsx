@@ -4,7 +4,7 @@ import "./globals.css";
 
 import AgeVerification from "@/components/AgeVerification";
 import CookieBanner from "@/components/CookieBanner";
-import StructuredData from "@/components/StructuredData";
+import Schema from "./schema";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,44 +19,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://camova.live"),
 
-  title: {
-    default: "CAMOVA | Premium Live Streaming Platform",
-    template: "%s | CAMOVA",
-  },
-
-  description:
-    "Discover CAMOVA, a premium live streaming platform with verified creators, private live shows and a modern streaming experience.",
-
-  keywords: [
-    "CAMOVA",
-    "live streaming",
-    "premium streaming",
-    "verified creators",
-    "private live shows",
-    "online streaming",
-  ],
-
-  authors: [
-    {
-      name: "CAMOVA",
-    },
-  ],
-
-  creator: "CAMOVA",
-  publisher: "CAMOVA",
-
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-
-  alternates: {
-    canonical: "https://camova.live",
-  },
+  title: "CAMOVA",
+  description: "Premium Live Streaming Platform",
 
   icons: {
     icon: "/icon.png",
@@ -65,13 +29,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "CAMOVA | Premium Live Streaming Platform",
-    description:
-      "Discover CAMOVA, a premium live streaming platform featuring verified creators and private live shows.",
+    title: "CAMOVA",
+    description: "Premium Live Streaming Platform",
     url: "https://camova.live",
     siteName: "CAMOVA",
-    locale: "en_US",
-    type: "website",
     images: [
       {
         url: "/logo.png",
@@ -80,13 +41,14 @@ export const metadata: Metadata = {
         alt: "CAMOVA",
       },
     ],
+    locale: "en_US",
+    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "CAMOVA | Premium Live Streaming Platform",
-    description:
-      "Discover CAMOVA, a premium live streaming platform featuring verified creators.",
+    title: "CAMOVA",
+    description: "Premium Live Streaming Platform",
     images: ["/logo.png"],
   },
 };
@@ -98,13 +60,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Schema />
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-black text-white`}
       >
-        <StructuredData />
-
         <AgeVerification />
-
         <CookieBanner />
 
         {children}
