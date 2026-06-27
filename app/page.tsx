@@ -4,6 +4,7 @@ import Models from "@/components/Models";
 import Stats from "@/components/Stats";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import SEOContent from "@/components/SEOContent";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Models />
       <Stats />
       <FAQ />
+      <SEOContent />
       <Footer />
     </main>
   );
